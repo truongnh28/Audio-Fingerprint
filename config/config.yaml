@@ -1,0 +1,72 @@
+# Parameters for the project as a whole
+fingerprint:
+# number of threads
+   thread_num: 3
+# path
+   path:
+     split: '/'
+     music_path: './dataset/'
+     query_path: './datatest1/'
+# Core parameters
+   core:
+# energy minimum
+     amp_min: 5
+# nearest neighbor points
+     near_num: 20
+# Minimum time interval for hashing
+     min_time_delta: 0
+# Maximum time interval for hashing
+     max_time_delta: 200
+# The area range of the local maximum (cross range)
+     neighborhood: 40
+     stft:
+# Sampling Rate
+       sr: 16000
+       n_fft: 4096
+       hop_length: 1024
+       win_length: 4096
+   # Other parameters
+   show_plot:
+     # Create a scatterplot of songs
+     create_database:
+       # Draw the constellation diagram
+       planisphere_plot: True
+     predict_plot:
+       # Hash graph
+       hash_plot: True
+   # calculate time switch
+   show_time: True
+   # Database related parameters
+   database:
+     # Host IP
+     host: '127.0.0.1'
+     # host port number
+     port: 3307
+     # database username
+     user: 'root'
+     # database password
+     password: '123456'
+     # The name of the database to connect to
+     database: 'finger_prints'
+     # character set
+     charset: 'utf8'
+     # Tables in the database
+     tables:
+       #finger_prints table field
+       finger_prints:
+         # table name
+         name: '`finger_prints`'
+         # column names
+         column:
+           id_fp: '`id_fp`'
+           music_id_fk: '`music_id_fk`'
+           hash: '`hash`'
+           offset: '`offset`'
+       # music table field
+       music:
+         # table name
+         name: '`music`'
+         column:
+           music_id: '`music_id`'
+           music_name: '`music_name`'
+           music_path: '`music_path`'
