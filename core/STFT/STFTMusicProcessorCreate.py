@@ -22,15 +22,15 @@ class STFTMusicProcessorCreate(IMusicProcessorCreate):
             music_id = connector.add_music(music_path)
 
             # Calculate Hash
-            hashes = list(self._calculation_hash(music_path=music_path))
+            # hashes = list(self._calculation_hash(music_path=music_path))
 
             # Save the Hash value to the database
-            connector.store_finger_prints(hashes=hashes, music_id_fk=music_id)
+            # connector.store_finger_prints(hashes=hashes, music_id_fk=music_id)
 
             # Hash number of songs
-            hash_num = connector.calculation_hash_num_by_music_id(music_id=music_id)
+            # hash_num = connector.calculation_hash_num_by_music_id(music_id=music_id)
             # print prompt information
-            print_message("song: " + str(music_id) + " Added successfully! \nHash number is:" + str(hash_num) + "\n")
+            # print_message("song: " + str(music_id) + " Added successfully! \nHash number is:" + str(hash_num) + "\n")
             pass
         # If the song exists in the database
         else:

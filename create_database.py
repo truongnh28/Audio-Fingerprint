@@ -9,7 +9,7 @@ def create_database():
     connector = MySQLConnector()
     music_processor = STFTMusicProcessorCreate()
     # duong dan den folder chua nhac
-    # music_path = "./dataset"
+    # music_path = "./dataset/"
     for path in os.listdir(music_path): 
         print(path)
         try:

@@ -114,8 +114,8 @@ class STFTMusicProcessorPredict(IMusicProcessorPredict):
                              endian='LITTLE')
         y = DATA1.T
         y = librosa.resample(y, SR1, 16000)
-        y = librosa.tone(220, length=256)
-        print(y)
+        # y = librosa.tone(220, length=256)
+        # print(y)
         # Do short-time Fourier transform
         arr_2d = librosa.stft(y,
                               n_fft=hp.fingerprint.core.stft.n_fft,
