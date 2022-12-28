@@ -108,12 +108,12 @@ class STFTMusicProcessorPredict(IMusicProcessorPredict):
             :return: spectrogram
         """
         # load songs
-        # y, sr = librosa.load(music_path, sr=16000)
-        # print(sr)
-        DATA1, SR1 = sf.read(music_path, channels=2, samplerate=48000, dtype=np.float32, subtype='PCM_32', format="RAW",
-                             endian='LITTLE')
-        y = DATA1.T
-        y = librosa.resample(y, SR1, 16000)
+        y, sr = librosa.load(music_path, sr=16000)
+        print(sr)
+        # DATA1, SR1 = sf.read(music_path, channels=2, samplerate=48000, dtype=np.float32, subtype='PCM_32', format="RAW",
+        #                      endian='LITTLE')
+        # y = DATA1.T
+        # y = librosa.resample(y, SR1, 16000)
         # y = librosa.tone(220, length=256)
         # print(y)
         # Do short-time Fourier transform
