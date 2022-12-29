@@ -39,13 +39,13 @@ fingerprint:
    # Database related parameters
    database:
      # Host IP
-     host: '127.0.0.1'
+     host: 'localhost'
      # host port number
-     port: 3307
+     port: 3306
      # database username
      user: 'root'
      # database password
-     password: '123456'
+     password: 'root'
      # The name of the database to connect to
      database: 'finger_prints'
      # character set

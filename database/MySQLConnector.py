@@ -142,6 +142,8 @@ class MySQLConnector(IConnector):
         self.cursor.execute(sql)
         # get the return value
         result = self.cursor.fetchone()
+        if result == None:
+            return [0, 0]
         return result
 
     # Find fingerprints

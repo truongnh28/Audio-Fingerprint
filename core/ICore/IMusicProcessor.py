@@ -130,8 +130,8 @@ class IMusicProcessor():
         # y-coordinate
         y = [int(item[1]) for item in x_and_y]
 
-        plt.scatter(x, y, marker='x')
-        plt.show()
+        # plt.scatter(x, y, marker='x')
+        # plt.show()
 
 
         pass
