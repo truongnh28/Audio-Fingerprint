@@ -138,7 +138,7 @@ class STFTMusicProcessorPredict(IMusicProcessorPredict):
         x = [int(item[0]) for item in x_and_y]
         y = [int(item[0]) for item in x_and_y]
 
-        plt.scatter(x, y, c=c, marker='o')
-        plt.show()
+        # plt.scatter(x, y, c=c, marker='o')
+        # plt.show()
 
         pass

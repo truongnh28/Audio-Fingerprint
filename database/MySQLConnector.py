@@ -143,7 +143,7 @@ class MySQLConnector(IConnector):
         # get the return value
         result = self.cursor.fetchone()
         if result == None:
-            return [-1,-1]
+            return [0, 0]
         return result
 
     # Find fingerprints

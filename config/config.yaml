@@ -39,7 +39,7 @@ fingerprint:
    # Database related parameters
    database:
      # Host IP
-     host: '34.126.170.163'
+     host: 'localhost'
      # host port number
      port: 3306
      # database username
