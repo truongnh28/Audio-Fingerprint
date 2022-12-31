@@ -70,3 +70,4 @@ fingerprint:
            music_id: '`music_id`'
            music_name: '`music_name`'
            music_path: '`music_path`'
+           id_mapping: '`id_mapping`'

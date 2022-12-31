@@ -16,7 +16,7 @@ def predict():
             music_info = music_processor.predict_music(music_path=music_path, connector=connector)
             print_message("Bài hát được dự đoán: " + str(music_info['music_id']) + ", --- Số lượng Hash khớp：" + str
             (music_info['max_hash_count']) + ", --- phần khớp bài hát：" + str(music_info['music_offset']))
-            return str(music_info['music_id'])
+            return str(connector.find_id_mapping(music_info['music_id']))
             pass
         except BaseException as e:
             # print_error("Error: " + str(path) + "\n" + str(e))

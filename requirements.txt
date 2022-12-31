@@ -7,3 +7,5 @@ matplotlib==3.6.2
 PyYAML==6.0
 Flask==2.2.2
 ffmpeg-python==0.2.0
+cryptography==38.0.4
+Flask-Cors==3.0.10

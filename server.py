@@ -10,11 +10,13 @@ from urllib import request
 # import numpy as np
 # import soundfile as sf 
 from flask import Flask, request
+from flask_cors import CORS
 from werkzeug.utils import secure_filename
 
 from predict import predict
 
 app = Flask(__name__)
+CORS(app)
 
 @app.post('/find_song')
 def find_song():
