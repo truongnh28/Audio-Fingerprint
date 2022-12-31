@@ -161,3 +161,26 @@ class MySQLConnector(IConnector):
         pass
 
     pass
+
+    def find_id_mapping(self, id_music):
+        # SQL
+        sql = "select %s from %s where %s = '%s'" % (
+            # column names
+            hp.fingerprint.database.tables.music.column.id_mapping,
+            # Table Name
+            hp.fingerprint.database.tables.music.name,
+            # column names
+            hp.fingerprint.database.tables.music.column.music_id,
+            # incoming parameters
+            id_music
+        )
+
+        # Execute SQL
+        self.cursor.execute(sql)
+        # get the return value
+        result = self.cursor.fetchone()
+        print(result[0])
+        if result is None:
+            return -1
+        else:
+            return int(result[0])
